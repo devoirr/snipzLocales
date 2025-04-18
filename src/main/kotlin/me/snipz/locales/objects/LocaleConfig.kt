@@ -28,6 +28,7 @@ class LocaleConfig<E>(private val file: File, private val enumClass: Class<E>) w
                 }
             } else {
                 defaultMessage.write(handle, constant.name.lowercase())
+                messages[constant] = defaultMessage
             }
         }
 
