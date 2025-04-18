@@ -7,7 +7,7 @@ import org.bukkit.entity.Player
 
 class Message(private val lines: List<String>) {
 
-    private val singleLine = lines.joinToString(" ")
+    private val singleLine = lines.joinToString("\n")
 
     fun send(sender: CommandSender) {
         lines.map { LocalesRegistry.messageDesigner(it) }
